@@ -28,7 +28,6 @@ name:black_concrete, rotation:any, category:Concrete, display-name:Black Concret
 name:black_concrete_powder, rotation:any, category:Concrete Powder, display-name:Black Concrete Powder
 name:black_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Black Glazed Terracotta
 name:black_shulker_box, rotation:any, category:Shulker Boxes, display-name:Black Shulker Box
-name:black_stained_glass, rotation:any, category:Glass, display-name:Black Stained Glass
 name:black_terracotta, rotation:any, category:Terracotta, display-name:Black Terracotta
 name:black_wool, rotation:any, category:Wool, display-name:Black Wool
 name:blue_concrete, rotation:any, category:Concrete, display-name:Blue Concrete
@@ -36,7 +35,6 @@ name:blue_concrete_powder, rotation:any, category:Concrete Powder, display-name:
 name:blue_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Blue Glazed Terracotta
 name:blue_ice, rotation:any, category:Misc, display-name:Blue Ice
 name:blue_shulker_box, rotation:any, category:Shulker Boxes, display-name:Blue Shulker Box
-name:blue_stained_glass, rotation:any, category:Glass, display-name:Blue Stained Glass
 name:blue_terracotta, rotation:any, category:Terracotta, display-name:Blue Terracotta
 name:blue_wool, rotation:any, category:Wool, display-name:Blue Wool
 name:bone_block_side, rotation:any, category:Misc, display-name:Bone Block
@@ -49,7 +47,6 @@ name:brown_concrete_powder, rotation:any, category:Concrete Powder, display-name
 name:brown_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Brown Glazed Terracotta
 name:brown_mushroom_block, rotation:any, category:Misc, display-name:Brown Mushroom Block
 name:brown_shulker_box, rotation:any, category:Shulker Boxes, display-name:Brown Shulker Box
-name:brown_stained_glass, rotation:any, category:Glass, display-name:Brown Stained Glass
 name:brown_terracotta, rotation:any, category:Terracotta, display-name:Brown Terracotta
 name:brown_wool, rotation:any, category:Wool, display-name:Brown Wool
 name:bubble_coral_block, rotation:any, category:Corals, display-name:Bubble Coral Block
@@ -74,7 +71,6 @@ name:cyan_concrete, rotation:any, category:Concrete, display-name:Cyan Concrete
 name:cyan_concrete_powder, rotation:any, category:Concrete Powder, display-name:Cyan Concrete Powder
 name:cyan_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Cyan Glazed Terracotta
 name:cyan_shulker_box, rotation:any, category:Shulker Boxes, display-name:Cyan Shulker Box
-name:cyan_stained_glass, rotation:any, category:Glass, display-name:Cyan Stained Glass
 name:cyan_terracotta, rotation:any, category:Terracotta, display-name:Cyan Terracotta
 name:cyan_wool, rotation:any, category:Wool, display-name:Cyan Wool
 name:dark_oak_log, rotation:any, category:Wood, display-name:Dark Oak Log
@@ -106,7 +102,6 @@ name:fire_coral_block, rotation:any, category:Corals, display-name:Fire Coral Bl
 name:furnace_front, rotation:side, category:Misc, display-name:Furnace
 name:furnace_side, rotation:side, category:Misc, display-name:Furnace
 name:furnace_top, rotation:top, category:Misc, display-name:Furnace
-name:glass, rotation:any, category:Glass, display-name:Glass
 name:glowstone, rotation:any, category:Misc, display-name:Glowstone
 name:gold_block, rotation:any, category:Ores, display-name:Gold Block
 name:gold_ore, rotation:any, category:Ores, display-name:Gold Ore
@@ -116,14 +111,12 @@ name:gray_concrete, rotation:any, category:Concrete, display-name:Gray Concrete
 name:gray_concrete_powder, rotation:any, category:Concrete Powder, display-name:Gray Concrete Powder
 name:gray_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Gray Glazed Terracotta
 name:gray_shulker_box, rotation:any, category:Shulker Boxes, display-name:Gray Shulker Box
-name:gray_stained_glass, rotation:any, category:Glass, display-name:Gray Stained Glass
 name:gray_terracotta, rotation:any, category:Terracotta, display-name:Gray Terracotta
 name:gray_wool, rotation:any, category:Wool, display-name:Gray Wool
 name:green_concrete, rotation:any, category:Concrete, display-name:Green Concrete
 name:green_concrete_powder, rotation:any, category:Concrete Powder, display-name:Green Concrete Powder
 name:green_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Green Glazed Terracotta
 name:green_shulker_box, rotation:any, category:Shulker Boxes, display-name:Green Shulker Box
-name:green_stained_glass, rotation:any, category:Glass, display-name:Green Stained Glass
 name:green_terracotta, rotation:any, category:Terracotta, display-name:Green Terracotta
 name:green_wool, rotation:any, category:Wool, display-name:Green Wool
 name:hay_block_side, rotation:side, category:Misc, display-name:Hay Block
@@ -132,42 +125,36 @@ name:horn_coral_block, rotation:any, category:Corals, display-name:Horn Coral Bl
 name:ice, rotation:any, category:Misc, display-name:Ice
 name:iron_block, rotation:any, category:Ores, display-name:Iron Block
 name:iron_ore, rotation:any, category:Ores, display-name:Iron Ore
-name:iron_trapdoor, rotation:any, category:Misc, display-name:Iron Trapdoor
 name:jack_o_lantern, rotation:any, category:Misc, display-name:Jack O Lantern
 name:jukebox_side, rotation:side, category:Misc, display-name:Jukebox
 name:jukebox_top, rotation:top, category:Misc, display-name:Jukebox
 name:jungle_log, rotation:any, category:Wood, display-name:Jungle Log
 name:jungle_log_top, rotation:any, category:Wood, display-name:Jungle Log
 name:jungle_planks, rotation:any, category:Wood, display-name:Jungle Planks
-name:jungle_trapdoor, rotation:any, category:Wood, display-name:Jungle Trapdoor
 name:lapis_block, rotation:any, category:Ores, display-name:Lapis Block
 name:lapis_ore, rotation:any, category:Ores, display-name:Lapis Ore
 name:light_blue_concrete, rotation:any, category:Concrete, display-name:Light Blue Concrete
 name:light_blue_concrete_powder, rotation:any, category:Concrete Powder, display-name:Light Blue Concrete Powder
 name:light_blue_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Light Blue Glazed Terracotta
 name:light_blue_shulker_box, rotation:any, category:Shulker Boxes, display-name:Light Blue Shulker Box
-name:light_blue_stained_glass, rotation:any, category:Glass, display-name:Light Blue Stained Glass
 name:light_blue_terracotta, rotation:any, category:Terracotta, display-name:Light Blue Terracotta
 name:light_blue_wool, rotation:any, category:Wool, display-name:Light Blue Wool
 name:light_gray_concrete, rotation:any, category:Concrete, display-name:Light Gray Concrete
 name:light_gray_concrete_powder, rotation:any, category:Concrete Powder, display-name:Light Gray Concrete Powder
 name:light_gray_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Light Gray Glazed Terracotta
 name:light_gray_shulker_box, rotation:any, category:Shulker Boxes, display-name:Light Gray Shulker Box
-name:light_gray_stained_glass, rotation:any, category:Glass, display-name:Light Gray Stained Glass
 name:light_gray_terracotta, rotation:any, category:Terracotta, display-name:Light Gray Terracotta
 name:light_gray_wool, rotation:any, category:Wool, display-name:Light Gray Wool
 name:lime_concrete, rotation:any, category:Concrete, display-name:Lime Concrete
 name:lime_concrete_powder, rotation:any, category:Concrete Powder, display-name:Lime Concrete Powder
 name:lime_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Lime Glazed Terracotta
 name:lime_shulker_box, rotation:any, category:Shulker Boxes, display-name:Lime Shulker Box
-name:lime_stained_glass, rotation:any, category:Glass, display-name:Lime Stained Glass
 name:lime_terracotta, rotation:any, category:Terracotta, display-name:Lime Terracotta
 name:lime_wool, rotation:any, category:Wool, display-name:Lime Wool
 name:magenta_concrete, rotation:any, category:Concrete, display-name:Magenta Concrete
 name:magenta_concrete_powder, rotation:any, category:Concrete Powder, display-name:Magenta Concrete Powder
 name:magenta_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Magenta Glazed Terracotta
 name:magenta_shulker_box, rotation:any, category:Shulker Boxes, display-name:Magenta Shulker Box
-name:magenta_stained_glass, rotation:any, category:Glass, display-name:Magenta Stained Glass
 name:magenta_terracotta, rotation:any, category:Terracotta, display-name:Magenta Terracotta
 name:magenta_wool, rotation:any, category:Wool, display-name:Magenta Wool
 name:magma, rotation:any, category:Misc, display-name:Magma
@@ -195,7 +182,6 @@ name:orange_concrete, rotation:any, category:Concrete, display-name:Orange Concr
 name:orange_concrete_powder, rotation:any, category:Concrete Powder, display-name:Orange Concrete Powder
 name:orange_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Orange Glazed Terracotta
 name:orange_shulker_box, rotation:any, category:Shulker Boxes, display-name:Orange Shulker Box
-name:orange_stained_glass, rotation:any, category:Glass, display-name:Orange Stained Glass
 name:orange_terracotta, rotation:any, category:Terracotta, display-name:Orange Terracotta
 name:orange_wool, rotation:any, category:Wool, display-name:Orange Wool
 name:packed_ice, rotation:any, category:Misc, display-name:Packed Ice
@@ -203,7 +189,6 @@ name:pink_concrete, rotation:any, category:Concrete, display-name:Pink Concrete
 name:pink_concrete_powder, rotation:any, category:Concrete Powder, display-name:Pink Concrete Powder
 name:pink_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Pink Glazed Terracotta
 name:pink_shulker_box, rotation:any, category:Shulker Boxes, display-name:Pink Shulker Box
-name:pink_stained_glass, rotation:any, category:Glass, display-name:Pink Stained Glass
 name:pink_terracotta, rotation:any, category:Terracotta, display-name:Pink Terracotta
 name:pink_wool, rotation:any, category:Wool, display-name:Pink Wool
 name:piston_bottom, rotation:any, category:Misc, display-name:Piston
@@ -220,7 +205,6 @@ name:purple_concrete, rotation:any, category:Concrete, display-name:Purple Concr
 name:purple_concrete_powder, rotation:any, category:Concrete Powder, display-name:Purple Concrete Powder
 name:purple_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Purple Glazed Terracotta
 name:purple_shulker_box, rotation:any, category:Shulker Boxes, display-name:Purple Shulker Box
-name:purple_stained_glass, rotation:any, category:Glass, display-name:Purple Stained Glass
 name:purple_terracotta, rotation:any, category:Terracotta, display-name:Purple Terracotta
 name:purple_wool, rotation:any, category:Wool, display-name:Purple Wool
 name:purpur_block, rotation:any, category:Stone, display-name:Purpur Block
@@ -245,10 +229,8 @@ name:red_sandstone, rotation:any, category:Stone, display-name:Red Sandstone
 name:red_sandstone_bottom, rotation:bottom, category:Stone, display-name:Red Sandstone
 name:red_sandstone_top, rotation:top, category:Stone, display-name:Red Sandstone
 name:red_shulker_box, rotation:any, category:Shulker Boxes, display-name:Red Shulker Box
-name:red_stained_glass, rotation:any, category:Glass, display-name:Red Stained Glass
 name:red_terracotta, rotation:any, category:Terracotta, display-name:Red Terracotta
 name:red_wool, rotation:any, category:Wool, display-name:Red Wool
-name:repeater, rotation:any, category:Misc, display-name:Repeater
 name:sand, rotation:any, category:Misc, display-name:Sand
 name:sandstone, rotation:any, category:Stone, display-name:Sandstone
 name:sandstone_bottom, rotation:bottom, category:Stone, display-name:Sandstone
@@ -258,7 +240,6 @@ name:slime_block, rotation:any, category:Misc, display-name:Slime Block
 name:snow, rotation:any, category:Misc, display-name:Snow
 name:soul_sand, rotation:any, category:Misc, display-name:Soul Sand
 name:sponge, rotation:any, category:Misc, display-name:Sponge
-name:spruce_leaves, rotation:any, category:Wood, display-name:Spruce Leaves
 name:spruce_log, rotation:any, category:Wood, display-name:Spruce Log
 name:spruce_log_top, rotation:any, category:Wood, display-name:Spruce Log
 name:spruce_planks, rotation:any, category:Wood, display-name:Spruce Planks
@@ -289,13 +270,11 @@ name:white_concrete, rotation:any, category:Concrete, display-name:White Concret
 name:white_concrete_powder, rotation:any, category:Concrete Powder, display-name:White Concrete Powder
 name:white_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:White Glazed Terracotta
 name:white_shulker_box, rotation:any, category:Shulker Boxes, display-name:White Shulker Box
-name:white_stained_glass, rotation:any, category:Glass, display-name:White Stained Glass
 name:white_terracotta, rotation:any, category:Terracotta, display-name:White Terracotta
 name:white_wool, rotation:any, category:Wool, display-name:White Wool
 name:yellow_concrete, rotation:any, category:Concrete, display-name:Yellow Concrete
 name:yellow_concrete_powder, rotation:any, category:Concrete Powder, display-name:Yellow Concrete Powder
 name:yellow_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Yellow Glazed Terracotta
 name:yellow_shulker_box, rotation:any, category:Shulker Boxes, display-name:Yellow Shulker Box
-name:yellow_stained_glass, rotation:any, category:Glass, display-name:Yellow Stained Glass
 name:yellow_terracotta, rotation:any, category:Terracotta, display-name:Yellow Terracotta
 name:yellow_wool, rotation:any, category:Wool, display-name:Yellow Wool

@@ -212,7 +212,7 @@ namespace Pixelwall
             {
                 texture.texture = new Bitmap(@"textures/" + texture.id + ".png");
             }
-            catch (FileNotFoundException)
+            catch (Exception)
             {
                 window.ConsoleLogError("Image for texture \"" + texture.id + "\" not found. Check textures directory. Texture will be ignored.");
                 goto skipTexture;
