@@ -1,0 +1,25 @@
+﻿<Window x:Class="Pixelwall.Blocks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pixelwall"
+        mc:Ignorable="d"
+		Closed="OnClosed"
+        Title="Blocks" Height="720" Width="1280">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30"/>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<TextBlock Grid.Row="0" Margin="5">Choose which blocks to use in pixel art</TextBlock>
+		<Border BorderBrush="Gray" BorderThickness="1" Margin="5" Grid.Row="1">
+			<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+				<WrapPanel Orientation="Vertical" Grid.Row="1" Name="BlockList">
+
+				</WrapPanel>
+			</ScrollViewer>
+		</Border>
+	</Grid>
+</Window>

@@ -1,0 +1,56 @@
+﻿<Window x:Class="Pixelwall.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pixelwall"
+        mc:Ignorable="d"
+        Title="Pixelwall" Width="600" Height="400" ResizeMode="NoResize">
+	<TabControl>
+		<TabItem Header="Main">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition  Width="200"/>
+					<ColumnDefinition Width="400"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition Height="60"/>
+				</Grid.RowDefinitions>
+
+				<StackPanel Grid.Column="0" Grid.Row="0" Margin="8" Orientation="Vertical">
+					<Button Width="120" Height="22" Margin="2" HorizontalAlignment="Center" Click="OnChooseImageClick">Choose an image</Button>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Margin="2" FontSize="12">Pixelart width:</TextBlock>
+						<TextBox Margin="2" Width="60" Name="WidthTextBox"></TextBox>
+					</StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Margin="2" FontSize="12">Pixelart height:</TextBlock>
+						<TextBox Margin="2" Width="60" Name="HeightTextBox"></TextBox>
+					</StackPanel>
+					<CheckBox Margin="2" Name="DitherCheckBox">Use dithering</CheckBox>
+					<Button Width="120" Height="22" Margin="2" HorizontalAlignment="Center" Click="OnBlocksClick">Blocks</Button>
+					<TextBlock Margin="2" HorizontalAlignment="Center">Orientation</TextBlock>
+					<RadioButton GroupName="Orientation" Name="topRadio" Content="Horizontal (look from above)" IsChecked="True"/>
+					<RadioButton GroupName="Orientation" Name="bottomRadio" Content="Horizontal (look from below)" />
+					<RadioButton GroupName="Orientation" Name="northRadio" Content="Vertical (look from north)" />
+					<RadioButton GroupName="Orientation" Name="southRadio" Content="Vertical (look from south)" />
+					<RadioButton GroupName="Orientation" Name="westRadio" Content="Vertical (look from west)" />
+					<RadioButton GroupName="Orientation" Name="eastRadio" Content="Vertical (look from east)" />
+				</StackPanel>
+
+				<Border BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Grid.Row="0" Width="350" Height="250" HorizontalAlignment="Center">
+					<Image Grid.Column="1" Grid.Row="0" MaxWidth="350" MaxHeight="250" Name="PreviewImage" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+				</Border>
+				<Button Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Width="250" Height="40" Click="OnGenerateClick">Generate</Button>
+			</Grid>
+		</TabItem>
+		<TabItem Header="Console">
+			<Border BorderBrush="LightGray" Margin="5" BorderThickness="2">
+				<ScrollViewer VerticalScrollBarVisibility="Auto">
+					<TextBlock Background="Black" Name="ConsoleBlock" Foreground="White" Padding="5"></TextBlock>
+				</ScrollViewer>
+			</Border>
+		</TabItem>
+	</TabControl>
+</Window>
