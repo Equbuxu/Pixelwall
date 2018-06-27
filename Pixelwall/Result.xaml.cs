@@ -36,7 +36,7 @@ namespace Pixelwall
             AddMaterials();
         }
 
-        
+
 
         private void AddMaterials()
         {
@@ -83,8 +83,33 @@ namespace Pixelwall
 
             if (!String.IsNullOrEmpty(fileDialog.FileName))
             {
-                image.Save(fileDialog.FileName);
+                if (ShowChunkGrid.IsChecked.Value)
+                {
+                    DrawnChunkGrid(image).Save(fileDialog.FileName);
+                }
+                else
+                {
+                    image.Save(fileDialog.FileName);
+                }
             }
+        }
+
+        private Bitmap DrawnChunkGrid(Bitmap image)
+        {
+            Bitmap newImage = new Bitmap(image);
+            Graphics gr = Graphics.FromImage(newImage);
+
+            for (int i = 0; i < image.Size.Width; i += data.TextureResolution * 16)
+            {
+                gr.DrawLine(Pens.Red, new PointF { X = i, Y = 0 }, new PointF { X = i, Y = image.Size.Height });
+            }
+
+            for (int i = 0; i < image.Size.Height; i += data.TextureResolution * 16)
+            {
+                gr.DrawLine(Pens.Red, new PointF { X = 0, Y = i }, new PointF { X = image.Size.Width, Y = i});
+            }
+
+            return newImage;
         }
 
         private void OnSaveTextClick(object sender, RoutedEventArgs e)
