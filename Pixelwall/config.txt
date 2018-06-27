@@ -1,0 +1,5 @@
+#Format: 
+#param: value
+#use colon with space as separator!
+
+textureResolution: 16
