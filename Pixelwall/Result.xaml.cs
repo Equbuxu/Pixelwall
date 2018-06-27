@@ -86,5 +86,24 @@ namespace Pixelwall
                 image.Save(fileDialog.FileName);
             }
         }
+
+        private void OnSaveTextClick(object sender, RoutedEventArgs e)
+        {
+            var fileDialog = new Microsoft.Win32.SaveFileDialog();
+            fileDialog.Filter = "Txt file|*.txt";
+            fileDialog.Title = "Save resources list";
+            fileDialog.ShowDialog();
+
+            if (!String.IsNullOrEmpty(fileDialog.FileName))
+            {
+                StreamWriter file = new StreamWriter(fileDialog.FileName);
+                foreach (KeyValuePair<string, int> pair in art.blockUses)
+                {
+                    file.WriteLine(data.textures[pair.Key].displayName + ": " + pair.Value);
+                }
+                file.Close();
+                file.Dispose();
+            }
+        }
     }
 }
