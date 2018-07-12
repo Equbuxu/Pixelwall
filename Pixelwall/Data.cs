@@ -16,9 +16,16 @@ namespace Pixelwall
         public bool used = true;
     }
 
+    public class Block
+    {
+        public string displayName;
+        public string[] textureIDs;
+    }
+
     public class Data
     {
         public Dictionary<string, Texture> textures = new Dictionary<string, Texture>();
+        public List<Block> blocks = new List<Block>();
         private int textureResolution;
         public int TextureResolution { get { return textureResolution; } }
 
@@ -28,10 +35,48 @@ namespace Pixelwall
         {
             this.window = window;
 
-            window.ConsoleLog("# Loading config.txt");
+            window.ConsoleLog("Loading config.txt");
             ParseConfig();
-            window.ConsoleLog("# Loading blockdata.txt");
+            window.ConsoleLog("Loading blockdata.txt");
             ParseBlockData();
+            ParseBlocks();
+        }
+
+        public void SaveChosenTexturesList()
+        {
+            window.ConsoleLog("Saving chosen textures to choosentextures.txt");
+            StreamWriter file = new StreamWriter("chosentextures.txt");
+            foreach (KeyValuePair<string, Texture> pair in textures)
+            {
+                if (pair.Value.used)
+                    file.WriteLine(pair.Key);
+            }
+            file.Close();
+            file.Dispose();
+        }
+
+        public void LoadChosenTexturesList(string filename)
+        {
+            window.ConsoleLog("Loading chosen textures from " + filename);
+            try
+            {
+                using (StreamReader file = new StreamReader(filename))
+                {
+
+                    foreach (KeyValuePair<string, Texture> pair in textures)
+                    {
+                        pair.Value.used = false;
+                    }
+
+                    while (!file.EndOfStream)
+                    {
+                        textures[file.ReadLine()].used = true;
+                    }
+                }
+            }
+            catch (IOException) {
+                window.ConsoleLogWarning("No file found.");
+            }
         }
 
         private void ParseBlockData()
@@ -99,6 +144,40 @@ namespace Pixelwall
             }
         }
 
+        private void ParseBlocks()
+        {
+            try
+            {
+                using (StreamReader config = new StreamReader("textureblockmerge.txt"))
+                {
+                    string line;
+                    while (true)
+                    {
+                        line = ReadLineFromFile(config);
+                        if (line == null)
+                            break;
+
+                        string[] parameters = line.Split(new string[] { ", " }, StringSplitOptions.None);
+
+                        Block block = new Block
+                        {
+                            textureIDs = new string[parameters.Length - 1],
+                            displayName = parameters[0],
+                        };
+                        for (int i = 1; i<parameters.Length;i++)
+                        {
+                            block.textureIDs[i - 1] = parameters[i];
+                        }
+                        blocks.Add(block);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                window.ConsoleLogError("Could not read textureblockmerge file. No textures will be merged into blocks.");
+            }
+        }
+
         private string ReadLineFromFile(StreamReader file)
         {
             string line;
@@ -161,14 +240,6 @@ namespace Pixelwall
                                 break;
                             case "bottom":
                                 texture.bottom = true;
-                                break;
-                            case "southeast":
-                                texture.south = true;
-                                texture.east = true;
-                                break;
-                            case "northwest":
-                                texture.north = true;
-                                texture.west = true;
                                 break;
                             case "topbottom":
                                 texture.top = true;

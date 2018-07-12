@@ -33,10 +33,7 @@
 					<TextBlock Margin="2" HorizontalAlignment="Center">Orientation</TextBlock>
 					<RadioButton GroupName="Orientation" Name="topRadio" Content="Horizontal (look from above)" IsChecked="True"/>
 					<RadioButton GroupName="Orientation" Name="bottomRadio" Content="Horizontal (look from below)" />
-					<RadioButton GroupName="Orientation" Name="northRadio" Content="Vertical (look from north)" />
-					<RadioButton GroupName="Orientation" Name="southRadio" Content="Vertical (look from south)" />
-					<RadioButton GroupName="Orientation" Name="westRadio" Content="Vertical (look from west)" />
-					<RadioButton GroupName="Orientation" Name="eastRadio" Content="Vertical (look from east)" />
+					<RadioButton GroupName="Orientation" Name="vertRadio" Content="Vertical" />
 				</StackPanel>
 
 				<Border BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Grid.Row="0" Width="350" Height="250" HorizontalAlignment="Center">

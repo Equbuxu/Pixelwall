@@ -14,6 +14,7 @@
 		</Grid.RowDefinitions>
 
 		<TextBlock Grid.Row="0" Margin="5">Choose which blocks to use in pixel art</TextBlock>
+		<Button Grid.Row="0" Margin="5" Width="100" HorizontalAlignment="Right" Click="OnResetClick">Reset to default</Button>
 		<Border BorderBrush="Gray" BorderThickness="1" Margin="5" Grid.Row="1">
 			<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
 				<WrapPanel Orientation="Vertical" Grid.Row="1" Name="BlockList">

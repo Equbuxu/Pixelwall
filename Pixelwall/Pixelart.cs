@@ -8,7 +8,7 @@ namespace Pixelwall
 {
     public enum BlockOrientation
     {
-        TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
+        TOP, BOTTOM, VERTICAL
     }
 
     public class Pixelart
@@ -18,6 +18,7 @@ namespace Pixelwall
         public readonly bool dithered;
         public readonly BlockOrientation orientation;
         public Dictionary<string, int> blockUses = new Dictionary<string, int>();
+
         private readonly Bitmap bitmap;
         private readonly Data data;
         List<Texture> field = new List<Texture>();
@@ -89,8 +90,10 @@ namespace Pixelwall
                 GenerateNormal();
             }
             CountUses();
+            MergeBlockUses();
         }
 
+        //Counts texture uses.
         private void CountUses()
         {
             foreach (Texture text in field)
@@ -98,6 +101,23 @@ namespace Pixelwall
                 if (!blockUses.ContainsKey(text.id))
                     blockUses.Add(text.id, 0);
                 blockUses[text.id]++;
+            }
+        }
+
+        //Called after CountUses. Merges textures numbers that belong to single block into one entry. Number used as a key.
+        private void MergeBlockUses()
+        {
+            for (int i = 0; i < data.blocks.Count; i++)
+            {
+               foreach (string id in data.blocks[i].textureIDs)
+                {
+                    if (!blockUses.ContainsKey(id))
+                        continue;
+                    if (!blockUses.ContainsKey(i.ToString()))
+                        blockUses.Add(i.ToString(), 0);
+                    blockUses[i.ToString()] += blockUses[id];
+                    blockUses.Remove(id);
+                }
             }
         }
 
@@ -198,20 +218,8 @@ namespace Pixelwall
                         if (!pair.Value.top)
                             continue;
                         break;
-                    case BlockOrientation.NORTH:
-                        if (!pair.Value.north)
-                            continue;
-                        break;
-                    case BlockOrientation.SOUTH:
-                        if (!pair.Value.south)
-                            continue;
-                        break;
-                    case BlockOrientation.EAST:
-                        if (!pair.Value.east)
-                            continue;
-                        break;
-                    case BlockOrientation.WEST:
-                        if (!pair.Value.west)
+                    case BlockOrientation.VERTICAL:
+                        if (!(pair.Value.north && pair.Value.east && pair.Value.south && pair.Value.west))
                             continue;
                         break;
                 }

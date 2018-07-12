@@ -34,9 +34,19 @@ namespace Pixelwall
             {
                 pair.Value.used = checkBoxes[pair.Key].IsChecked.Value;
             }
+
+            data.SaveChosenTexturesList();
         }
 
-        private Dictionary<string, StackPanel> blocks = new Dictionary<string, StackPanel>();
+        private void OnResetClick(object sender, EventArgs e)
+        {
+            data.LoadChosenTexturesList("defaultchoises.txt");
+            foreach (KeyValuePair<string, CheckBox> pair in checkBoxes)
+            {
+                pair.Value.IsChecked = data.textures[pair.Key].used;
+            }
+        }
+
         private Dictionary<string, WrapPanel> categories = new Dictionary<string, WrapPanel>();
         private Dictionary<string, CheckBox> checkBoxes = new Dictionary<string, CheckBox>();
 
@@ -55,26 +65,10 @@ namespace Pixelwall
                 CreateCategoryInDictionary(texture.category);
             }
 
-            if (blocks.ContainsKey(texture.displayName))
-            {
-                Image image = new Image
-                {
-                    Source = Util.BitmapToBitmapImage(texture.texture),
-                    Width = data.TextureResolution,
-                    Height = data.TextureResolution
-                };
-                blocks[texture.displayName].Children.Insert(1, image);
-                checkBoxes.Add(texture.id, blocks[texture.displayName].Children[0] as CheckBox);
-            }
-            else
-            {
-                StackPanel panel = ConstructTexture(texture);
-                checkBoxes.Add(texture.id, panel.Children[0] as CheckBox);
-                blocks.Add(texture.displayName, panel);
-                categories[texture.category].Children.Add(panel);
-            }
+            StackPanel panel = ConstructTexture(texture);
+            checkBoxes.Add(texture.id, panel.Children[0] as CheckBox);
+            categories[texture.category].Children.Add(panel);
         }
-
 
         private StackPanel ConstructTexture(Texture texture)
         {

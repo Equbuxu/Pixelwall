@@ -24,14 +24,16 @@ namespace Pixelwall
         Pixelart art;
         Bitmap image;
         Data data;
+        MainWindow window;
 
-        public Result(Pixelart result, Data data)
+        public Result(Pixelart result, Data data, MainWindow window)
         {
             InitializeComponent();
 
             art = result;
             image = art.GetImage();
             this.data = data;
+            this.window = window;
             GenerationResult.Source = Util.BitmapToBitmapImage(image);
             AddMaterials();
         }
@@ -42,15 +44,44 @@ namespace Pixelwall
         {
             foreach (KeyValuePair<string, int> pair in art.blockUses)
             {
+                Bitmap texture;
+                string displayName;
+
+                //Get texture and name
+                if (data.textures.ContainsKey(pair.Key))
+                {
+                    texture = data.textures[pair.Key].texture;
+                    displayName = data.textures[pair.Key].displayName;
+                }
+                else
+                {
+                    int i;
+                    if (!Int32.TryParse(pair.Key, out i))
+                    {
+                        window.ConsoleLogError("Could not find the texture and display name for \"" + pair.Key + "\"");
+                        continue;
+                    }
+
+                    if (data.blocks[i].textureIDs.Length < 1)
+                    {
+                        window.ConsoleLogError("No textures are present for block \"" + data.blocks[i].displayName + "\"");
+                        continue;
+                    }
+
+                    texture = data.textures[data.blocks[i].textureIDs[0]].texture;
+                    displayName = data.blocks[i].displayName;
+                }
+
+                //make a gui element
                 System.Windows.Controls.Image image = new System.Windows.Controls.Image
                 {
-                    Source = Util.BitmapToBitmapImage(data.textures[pair.Key].texture),
+                    Source = Util.BitmapToBitmapImage(texture),
                     Margin = new Thickness(2.0)
                 };
 
                 TextBlock number = new TextBlock
                 {
-                    Text = data.textures[pair.Key].displayName + " - " + pair.Value.ToString(),
+                    Text = displayName + " - " + pair.Value.ToString(),
                     Margin = new Thickness(2.0)
                 };
 
@@ -76,9 +107,11 @@ namespace Pixelwall
 
         private void OnSaveClick(object sender, RoutedEventArgs e)
         {
-            var fileDialog = new Microsoft.Win32.SaveFileDialog();
-            fileDialog.Filter = "PNG image|*.png";
-            fileDialog.Title = "Save an Image";
+            var fileDialog = new Microsoft.Win32.SaveFileDialog
+            {
+                Filter = "PNG image|*.png",
+                Title = "Save an Image"
+            };
             fileDialog.ShowDialog();
 
             if (!String.IsNullOrEmpty(fileDialog.FileName))
@@ -114,9 +147,11 @@ namespace Pixelwall
 
         private void OnSaveTextClick(object sender, RoutedEventArgs e)
         {
-            var fileDialog = new Microsoft.Win32.SaveFileDialog();
-            fileDialog.Filter = "Txt file|*.txt";
-            fileDialog.Title = "Save resources list";
+            var fileDialog = new Microsoft.Win32.SaveFileDialog
+            {
+                Filter = "Txt file|*.txt",
+                Title = "Save resources list"
+            };
             fileDialog.ShowDialog();
 
             if (!String.IsNullOrEmpty(fileDialog.FileName))
@@ -124,7 +159,19 @@ namespace Pixelwall
                 StreamWriter file = new StreamWriter(fileDialog.FileName);
                 foreach (KeyValuePair<string, int> pair in art.blockUses)
                 {
-                    file.WriteLine(data.textures[pair.Key].displayName + ": " + pair.Value);
+                    string displayName;
+                    if (data.textures.ContainsKey(pair.Key))
+                    {
+                        displayName = data.textures[pair.Key].displayName;
+                    }
+                    else
+                    {
+                        int i;
+                        Int32.TryParse(pair.Key, out i);
+                        displayName = data.blocks[i].displayName;
+                    }
+
+                    file.WriteLine(displayName + ": " + pair.Value);
                 }
                 file.Close();
                 file.Dispose();

@@ -26,6 +26,7 @@ namespace Pixelwall
         {
             InitializeComponent();
             data = new Data(this);
+            data.LoadChosenTexturesList("chosentextures.txt");
         }
 
         public void ConsoleLog(string msg)
@@ -83,14 +84,9 @@ namespace Pixelwall
                 orientation = BlockOrientation.TOP;
             if (bottomRadio.IsChecked.Value)
                 orientation = BlockOrientation.BOTTOM;
-            if (southRadio.IsChecked.Value)
-                orientation = BlockOrientation.SOUTH;
-            if (northRadio.IsChecked.Value)
-                orientation = BlockOrientation.NORTH;
-            if (westRadio.IsChecked.Value)
-                orientation = BlockOrientation.WEST;
-            if (eastRadio.IsChecked.Value)
-                orientation = BlockOrientation.EAST;
+            if (vertRadio.IsChecked.Value)
+                orientation = BlockOrientation.VERTICAL;
+
 
             int width = 0, height = 0;
             if (int.TryParse(WidthTextBox.Text, out width) && int.TryParse(HeightTextBox.Text, out height))
@@ -102,7 +98,7 @@ namespace Pixelwall
                 pixelart = new Pixelart(data, image, DitherCheckBox.IsChecked.Value, orientation);
             }
 
-            Result resultWindow = new Result(pixelart, data);
+            Result resultWindow = new Result(pixelart, data, this);
             resultWindow.Show();
             
         }

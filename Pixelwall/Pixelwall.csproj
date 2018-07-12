@@ -111,5 +111,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="blockdata.txt" />
+    <Resource Include="config.txt" />
+    <Resource Include="textureblockmerge.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="chosentextures.txt" />
+    <Resource Include="defaultchoises.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,39 @@
+#This file is used to merge multiple textures into one block.
+#format:
+#DisplayName, file1, file2, file3, ... fileN
+#For example:
+#acacia_log, acacia_log_top, Acacia Log
+#Now both acacia_log and acacia_log_top will be displayed as one block "Acacia Log" in the results window.
+#Any display name defined there will overwrite ones from blockdata.txt
+
+Stripped Dark Oak Log, stripped_dark_oak_log, stripped_dark_oak_log_top
+Acacia Log, acacia_log, acacia_log_top
+Birch Log, birch_log, birch_log_top
+Bone Block, bone_block_side, bone_block_top
+Chiseled Quartz, chiseled_quartz_block, chiseled_quartz_block_top
+Dark Oak Log, dark_oak_log, dark_oak_log_top
+Dispenser, dispenser_front, dispenser_front_vertical
+Dried Kelp, dried_kelp_bottom, dried_kelp_side, dried_kelp_top
+Dropper, dropper_front, dropper_front_vertical
+Furnace, furnace_front, furnace_side, furnace_top
+Hay Block, hay_block_side, hay_block_top
+Jukebox, jukebox_side, jukebox_top
+Jungle Logá jungle_log, jungle_log_top
+Melon, melon_side, melon_top
+Oak Log, oak_log, oak_log_top
+Observer, observer_back, observer_front, observer_side, observer_top
+Piston, piston_bottom, piston_side, piston_top
+Pumpkin, pumpkin_side, pumpkin_top
+Purpur Pillar, purpur_pillar, purpur_pillar_top
+Quartz Block, quartz_block_bottom, quartz_block_side, quartz_block_top
+Quartz Pillar, quartz_pillar, quartz_pillar_top
+Red Sandstone, red_sandstone, red_sandstone_bottom, red_sandstone_top
+Sandstone, sandstone, sandstone_bottom, sandstone_top
+Spruce Log, spruce_log, spruce_log_top
+Double Stone Slab, stone_slab_side, stone_slab_top
+Stripped Acacia, stripped_acacia_log, stripped_acacia_top
+Stripped Birch Log, stripped_birch_log, stripped_birch_log_top
+Stripped Jungle Log, stripped_jungle_log, stripped_jungle_log_top
+Stripped Oak Log, stripped_oak_log, stripped_oak_log_top
+Stripped Spruce Log, stripped_spruce_log, stripped_spruce_log_top
+TNT, tnt_bottom, tnt_side, tnt_top
