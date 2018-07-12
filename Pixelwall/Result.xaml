@@ -18,7 +18,9 @@
 		</Grid.ColumnDefinitions>
 
 		<Border BorderBrush="Gray" BorderThickness="1" Grid.Row="0" Grid.ColumnSpan="2" Width="500" Height="280">
-			<Image Name="GenerationResult" Grid.Row="0" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+			<local:ZoomBorder x:Name="imageBorder" ClipToBounds="True" Background="LightGray">
+				<Image Name="GenerationResult" Grid.Row="0" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+			</local:ZoomBorder>
 		</Border>
 
 		<Button Click="OnSaveTextClick" Width="200" Height="50" Grid.Row="1" Grid.Column="0">Save resources to a text file</Button>

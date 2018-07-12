@@ -176,6 +176,8 @@ namespace Pixelwall
             {
                 window.ConsoleLogError("Could not read textureblockmerge file. No textures will be merged into blocks.");
             }
+
+            blocks.Sort((x, y) => (x.displayName.CompareTo(y.displayName)));
         }
 
         private string ReadLineFromFile(StreamReader file)

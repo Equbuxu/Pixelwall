@@ -38,8 +38,6 @@ namespace Pixelwall
             AddMaterials();
         }
 
-
-
         private void AddMaterials()
         {
             foreach (KeyValuePair<string, int> pair in art.blockUses)
@@ -118,7 +116,7 @@ namespace Pixelwall
             {
                 if (ShowChunkGrid.IsChecked.Value)
                 {
-                    DrawnChunkGrid(image).Save(fileDialog.FileName);
+                    DrawChunkGrid(image).Save(fileDialog.FileName);
                 }
                 else
                 {
@@ -127,7 +125,7 @@ namespace Pixelwall
             }
         }
 
-        private Bitmap DrawnChunkGrid(Bitmap image)
+        private Bitmap DrawChunkGrid(Bitmap image)
         {
             Bitmap newImage = new Bitmap(image);
             Graphics gr = Graphics.FromImage(newImage);

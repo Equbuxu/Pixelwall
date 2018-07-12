@@ -11,7 +11,7 @@
 ##topbottom - top and bottom
 
 #category - in-app category
-##existing categories: Wood, Concrete Powder, Concrete, Wool, Glazed Terracotta, Terracotta, Shulker Boxes, Quartz, Corals, Ores, Consrete, Stone, Misc, Other
+##existing categories: Wood, Concrete Powder, Concrete, Wool, Glazed Terracotta, Terracotta, Shulker Boxes, Quartz, Corals, Ores, Consrete, Stone, Misc, Other, Blocks, Plants, Powered, Desert
 
 #display name - in-app name
 #----
@@ -25,7 +25,7 @@ name:bedrock, rotation:any, category:Other, display-name:Bedrock
 name:birch_log, rotation:any, category:Wood, display-name:Birch Log
 name:birch_log_top, rotation:any, category:Wood, display-name:Birch Log Top
 name:birch_planks, rotation:any, category:Wood, display-name:Birch Planks
-name:birch_trapdoor, rotation:any, category:Wood, display-name:Birch Trapdoor
+name:birch_trapdoor, rotation:any, category:Powered, display-name:Birch Trapdoor
 name:black_concrete, rotation:any, category:Concrete, display-name:Black Concrete
 name:black_concrete_powder, rotation:any, category:Concrete Powder, display-name:Black Concrete Powder
 name:black_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Black Glazed Terracotta
@@ -41,7 +41,7 @@ name:blue_terracotta, rotation:any, category:Terracotta, display-name:Blue Terra
 name:blue_wool, rotation:any, category:Wool, display-name:Blue Wool
 name:bone_block_side, rotation:any, category:Misc, display-name:Bone Block Side
 name:bone_block_top, rotation:any, category:Misc, display-name:Bone Block Top
-name:bookshelf, rotation:any, category:Wood, display-name:Bookshelf
+name:bookshelf, rotation:any, category:Misc, display-name:Bookshelf
 name:brain_coral_block, rotation:any, category:Corals, display-name:Brain Coral Block
 name:bricks, rotation:any, category:Stone, display-name:Bricks
 name:brown_concrete, rotation:any, category:Concrete, display-name:Brown Concrete
@@ -50,20 +50,20 @@ name:brown_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-
 name:brown_terracotta, rotation:any, category:Terracotta, display-name:Brown Terracotta
 name:brown_wool, rotation:any, category:Wool, display-name:Brown Wool
 name:bubble_coral_block, rotation:any, category:Corals, display-name:Bubble Coral Block
-name:carved_pumpkin, rotation:any, category:Misc, display-name:Carved Pumpkin
+name:carved_pumpkin, rotation:side, category:Misc, display-name:Carved Pumpkin
 name:chiseled_quartz_block, rotation:any, category:Quartz, display-name:Chiseled Quartz Block
 name:chiseled_quartz_block_top, rotation:top, category:Quartz, display-name:Chiseled Quartz Block Top
-name:chiseled_red_sandstone, rotation:any, category:Stone, display-name:Chiseled Red Sandstone
-name:chiseled_sandstone, rotation:any, category:Stone, display-name:Chiseled Sandstone
+name:chiseled_red_sandstone, rotation:any, category:Desert, display-name:Chiseled Red Sandstone
+name:chiseled_sandstone, rotation:any, category:Desert, display-name:Chiseled Sandstone
 name:chiseled_stone_bricks, rotation:any, category:Stone, display-name:Chiseled Stone Bricks
 name:clay, rotation:any, category:Misc, display-name:Clay
-name:coal_block, rotation:any, category:Ores, display-name:Coal Block
+name:coal_block, rotation:any, category:Blocks, display-name:Coal Block
 name:coal_ore, rotation:any, category:Ores, display-name:Coal Ore
 name:coarse_dirt, rotation:any, category:Misc, display-name:Coarse Dirt
 name:cobblestone, rotation:any, category:Stone, display-name:Cobblestone
 name:cracked_stone_bricks, rotation:any, category:Stone, display-name:Cracked Stone Bricks
-name:cut_red_sandstone, rotation:any, category:Stone, display-name:Cut Red Sandstone
-name:cut_sandstone, rotation:any, category:Stone, display-name:Cut Sandstone
+name:cut_red_sandstone, rotation:any, category:Desert, display-name:Cut Red Sandstone
+name:cut_sandstone, rotation:any, category:Desert, display-name:Cut Sandstone
 name:cyan_concrete, rotation:any, category:Concrete, display-name:Cyan Concrete
 name:cyan_concrete_powder, rotation:any, category:Concrete Powder, display-name:Cyan Concrete Powder
 name:cyan_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Cyan Glazed Terracotta
@@ -73,25 +73,25 @@ name:cyan_wool, rotation:any, category:Wool, display-name:Cyan Wool
 name:dark_oak_log, rotation:any, category:Wood, display-name:Dark Oak Log
 name:dark_oak_log_top, rotation:any, category:Wood, display-name:Dark Oak Log Top
 name:dark_oak_planks, rotation:any, category:Wood, display-name:Dark Oak Planks
-name:dark_oak_trapdoor, rotation:any, category:Wood, display-name:Dark Oak Trapdoor
+name:dark_oak_trapdoor, rotation:any, category:Powered, display-name:Dark Oak Trapdoor
 name:dark_prismarine, rotation:any, category:Misc, display-name:Dark Prismarine
 name:dead_brain_coral_block, rotation:any, category:Corals, display-name:Dead Brain Coral Block
 name:dead_bubble_coral_block, rotation:any, category:Corals, display-name:Dead Bubble Coral Block
 name:dead_fire_coral_block, rotation:any, category:Corals, display-name:Dead Fire Coral Block
 name:dead_horn_coral_block, rotation:any, category:Corals, display-name:Dead Horn Coral Block
 name:dead_tube_coral_block, rotation:any, category:Corals, display-name:Dead Tube Coral Block
-name:diamond_block, rotation:any, category:Ores, display-name:Diamond Block
+name:diamond_block, rotation:any, category:Blocks, display-name:Diamond Block
 name:diamond_ore, rotation:any, category:Ores, display-name:Diamond Ore
 name:diorite, rotation:any, category:Stone, display-name:Diorite
 name:dirt, rotation:any, category:Misc, display-name:Dirt
-name:dispenser_front, rotation:side, category:Misc, display-name:Dispenser Front (Side)
-name:dispenser_front_vertical, rotation:topbottom, category:Misc, display-name:Dispenser Front (Top)
-name:dried_kelp_bottom, rotation:bottom, category:Misc, display-name:Dried Kelp Bottom
-name:dried_kelp_side, rotation:side, category:Misc, display-name:Dried Kelp Side
-name:dried_kelp_top, rotation:top, category:Misc, display-name:Dried Kelp Top
-name:dropper_front, rotation:side, category:Misc, display-name:Dropper Front (Side)
-name:dropper_front_vertical, rotation:topbottom, category:Misc, display-name:Dropper Front (Top)
-name:emerald_block, rotation:any, category:Ores, display-name:Emerald Block
+name:dispenser_front, rotation:side, category:Powered, display-name:Dispenser Front (Side)
+name:dispenser_front_vertical, rotation:topbottom, category:Powered, display-name:Dispenser Front (Top)
+name:dried_kelp_bottom, rotation:bottom, category:Plants, display-name:Dried Kelp Bottom
+name:dried_kelp_side, rotation:side, category:Plants, display-name:Dried Kelp Side
+name:dried_kelp_top, rotation:top, category:Plants, display-name:Dried Kelp Top
+name:dropper_front, rotation:side, category:Powered, display-name:Dropper Front (Side)
+name:dropper_front_vertical, rotation:topbottom, category:Powered, display-name:Dropper Front (Top)
+name:emerald_block, rotation:any, category:Blocks, display-name:Emerald Block
 name:emerald_ore, rotation:any, category:Ores, display-name:Emerald Ore
 name:end_stone, rotation:any, category:Stone, display-name:End Stone
 name:end_stone_bricks, rotation:any, category:Stone, display-name:End Stone Bricks
@@ -99,8 +99,7 @@ name:fire_coral_block, rotation:any, category:Corals, display-name:Fire Coral Bl
 name:furnace_front, rotation:side, category:Misc, display-name:Furnace Front
 name:furnace_side, rotation:side, category:Misc, display-name:Furnace Side
 name:furnace_top, rotation:top, category:Misc, display-name:Furnace Top
-name:glowstone, rotation:any, category:Misc, display-name:Glowstone
-name:gold_block, rotation:any, category:Ores, display-name:Gold Block
+name:gold_block, rotation:any, category:Blocks, display-name:Gold Block
 name:gold_ore, rotation:any, category:Ores, display-name:Gold Ore
 name:granite, rotation:any, category:Stone, display-name:Granite
 name:gravel, rotation:any, category:Misc, display-name:Gravel
@@ -119,16 +118,14 @@ name:green_wool, rotation:any, category:Wool, display-name:Green Wool
 name:hay_block_side, rotation:side, category:Misc, display-name:Hay Block Side
 name:hay_block_top, rotation:top, category:Misc, display-name:Hay Block Top
 name:horn_coral_block, rotation:any, category:Corals, display-name:Horn Coral Block
-name:ice, rotation:any, category:Misc, display-name:Ice
-name:iron_block, rotation:any, category:Ores, display-name:Iron Block
+name:iron_block, rotation:any, category:Blocks, display-name:Iron Block
 name:iron_ore, rotation:any, category:Ores, display-name:Iron Ore
-name:jack_o_lantern, rotation:any, category:Misc, display-name:Jack O Lantern
 name:jukebox_side, rotation:side, category:Misc, display-name:Jukebox Side
 name:jukebox_top, rotation:top, category:Misc, display-name:Jukebox Top
 name:jungle_log, rotation:any, category:Wood, display-name:Jungle Log
 name:jungle_log_top, rotation:any, category:Wood, display-name:Jungle Log Top
 name:jungle_planks, rotation:any, category:Wood, display-name:Jungle Planks
-name:lapis_block, rotation:any, category:Ores, display-name:Lapis Block
+name:lapis_block, rotation:any, category:Blocks, display-name:Lapis Block
 name:lapis_ore, rotation:any, category:Ores, display-name:Lapis Ore
 name:light_blue_concrete, rotation:any, category:Concrete, display-name:Light Blue Concrete
 name:light_blue_concrete_powder, rotation:any, category:Concrete Powder, display-name:Light Blue Concrete Powder
@@ -155,22 +152,22 @@ name:magenta_shulker_box, rotation:any, category:Shulker Boxes, display-name:Mag
 name:magenta_terracotta, rotation:any, category:Terracotta, display-name:Magenta Terracotta
 name:magenta_wool, rotation:any, category:Wool, display-name:Magenta Wool
 name:magma, rotation:any, category:Misc, display-name:Magma
-name:melon_side, rotation:side, category:Misc, display-name:Melon Side
-name:melon_top, rotation:top, category:Misc, display-name:Melon Top
+name:melon_side, rotation:side, category:Plants, display-name:Melon Side
+name:melon_top, rotation:top, category:Plants, display-name:Melon Top
 name:mossy_cobblestone, rotation:any, category:Stone, display-name:Mossy Cobblestone
 name:mossy_stone_bricks, rotation:any, category:Stone, display-name:Mossy Stone Bricks
 name:netherrack, rotation:any, category:Stone, display-name:Netherrack
 name:nether_bricks, rotation:any, category:Stone, display-name:Nether Bricks
-name:nether_quartz_ore, rotation:any, category:Quartz, display-name:Nether Quartz Ore
-name:nether_wart_block, rotation:any, category:Misc, display-name:Nether Wart Block
-name:note_block, rotation:any, category:Misc, display-name:Note Block
+name:nether_quartz_ore, rotation:any, category:Ores, display-name:Nether Quartz Ore
+name:nether_wart_block, rotation:any, category:Plants, display-name:Nether Wart Block
+name:note_block, rotation:any, category:Powered, display-name:Note Block
 name:oak_log, rotation:any, category:Wood, display-name:Oak Log
 name:oak_log_top, rotation:any, category:Wood, display-name:Oak Log Top
 name:oak_planks, rotation:any, category:Wood, display-name:Oak Planks
-name:observer_back, rotation:any, category:Misc, display-name:Observer Back
-name:observer_front, rotation:any, category:Misc, display-name:Observer Front
-name:observer_side, rotation:any, category:Misc, display-name:Observer Side
-name:observer_top, rotation:any, category:Misc, display-name:Observer Top
+name:observer_back, rotation:any, category:Powered, display-name:Observer Back
+name:observer_front, rotation:any, category:Powered, display-name:Observer Front
+name:observer_side, rotation:any, category:Powered, display-name:Observer Side
+name:observer_top, rotation:any, category:Powered, display-name:Observer Top
 name:obsidian, rotation:any, category:Stone, display-name:Obsidian
 name:orange_concrete, rotation:any, category:Concrete, display-name:Orange Concrete
 name:orange_concrete_powder, rotation:any, category:Concrete Powder, display-name:Orange Concrete Powder
@@ -185,16 +182,16 @@ name:pink_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-n
 name:pink_shulker_box, rotation:any, category:Shulker Boxes, display-name:Pink Shulker Box
 name:pink_terracotta, rotation:any, category:Terracotta, display-name:Pink Terracotta
 name:pink_wool, rotation:any, category:Wool, display-name:Pink Wool
-name:piston_bottom, rotation:any, category:Misc, display-name:Piston Bottom
-name:piston_side, rotation:any, category:Misc, display-name:Piston Side
-name:piston_top, rotation:any, category:Misc, display-name:Piston Top
-name:piston_top_sticky, rotation:any, category:Misc, display-name:Sticky Piston Top
+name:piston_bottom, rotation:any, category:Powered, display-name:Piston Bottom
+name:piston_side, rotation:any, category:Powered, display-name:Piston Side
+name:piston_top, rotation:any, category:Powered, display-name:Piston Top
+name:piston_top_sticky, rotation:any, category:Powered, display-name:Sticky Piston
 name:polished_andesite, rotation:any, category:Stone, display-name:Polished Andesite
 name:polished_diorite, rotation:any, category:Stone, display-name:Polished Diorite
 name:polished_granite, rotation:any, category:Stone, display-name:Polished Granite
 name:prismarine_bricks, rotation:any, category:Misc, display-name:Prismarine Bricks
-name:pumpkin_side, rotation:side, category:Misc, display-name:Pumpkin Side
-name:pumpkin_top, rotation:top, category:Misc, display-name:Pumpkin Top
+name:pumpkin_side, rotation:side, category:Plants, display-name:Pumpkin Side
+name:pumpkin_top, rotation:top, category:Plants, display-name:Pumpkin Top
 name:purple_concrete, rotation:any, category:Concrete, display-name:Purple Concrete
 name:purple_concrete_powder, rotation:any, category:Concrete Powder, display-name:Purple Concrete Powder
 name:purple_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Purple Glazed Terracotta
@@ -210,22 +207,22 @@ name:quartz_block_top, rotation:any, category:Quartz, display-name:Quartz Block 
 name:quartz_pillar, rotation:any, category:Quartz, display-name:Quartz Pillar
 name:quartz_pillar_top, rotation:any, category:Quartz, display-name:Quartz Pillar Top
 name:redstone_block, rotation:any, category:Misc, display-name:Redstone Block
-name:redstone_ore, rotation:any, category:Ores, display-name:Redstone Ore
+name:redstone_ore, rotation:any, category:Blocks, display-name:Redstone Ore
 name:red_concrete, rotation:any, category:Concrete, display-name:Red Concrete
 name:red_concrete_powder, rotation:any, category:Concrete Powder, display-name:Red Concrete Powder
 name:red_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Red Glazed Terracotta
 name:red_nether_bricks, rotation:any, category:Stone, display-name:Red Nether Bricks
-name:red_sand, rotation:any, category:Misc, display-name:Red Sand
-name:red_sandstone, rotation:side, category:Stone, display-name:Red Sandstone Side
-name:red_sandstone_bottom, rotation:bottom, category:Stone, display-name:Red Sandstone Bottom
-name:red_sandstone_top, rotation:top, category:Stone, display-name:Red Sandstone Top
+name:red_sand, rotation:any, category:Desert, display-name:Red Sand
+name:red_sandstone, rotation:side, category:Desert, display-name:Red Sandstone Side
+name:red_sandstone_bottom, rotation:bottom, category:Desert, display-name:Red Sandstone Bottom
+name:red_sandstone_top, rotation:top, category:Desert, display-name:Red Sandstone Top
 name:red_shulker_box, rotation:any, category:Shulker Boxes, display-name:Red Shulker Box
 name:red_terracotta, rotation:any, category:Terracotta, display-name:Red Terracotta
 name:red_wool, rotation:any, category:Wool, display-name:Red Wool
-name:sand, rotation:any, category:Misc, display-name:Sand
-name:sandstone, rotation:side, category:Stone, display-name:Sandstone Side
-name:sandstone_bottom, rotation:bottom, category:Stone, display-name:Sandstone Bottom
-name:sandstone_top, rotation:top, category:Stone, display-name:Sandstone Top
+name:sand, rotation:any, category:Desert, display-name:Sand
+name:sandstone, rotation:side, category:Desert, display-name:Sandstone Side
+name:sandstone_bottom, rotation:bottom, category:Desert, display-name:Sandstone Bottom
+name:sandstone_top, rotation:top, category:Desert, display-name:Sandstone Top
 name:shulker_box, rotation:any, category:Shulker Boxes, display-name:Shulker Box
 name:snow, rotation:any, category:Misc, display-name:Snow
 name:soul_sand, rotation:any, category:Misc, display-name:Soul Sand
@@ -233,7 +230,7 @@ name:sponge, rotation:any, category:Misc, display-name:Sponge
 name:spruce_log, rotation:any, category:Wood, display-name:Spruce Log
 name:spruce_log_top, rotation:any, category:Wood, display-name:Spruce Log Top
 name:spruce_planks, rotation:any, category:Wood, display-name:Spruce Planks
-name:spruce_trapdoor, rotation:any, category:Wood, display-name:Spruce Trapdoor
+name:spruce_trapdoor, rotation:any, category:Powered, display-name:Spruce Trapdoor
 name:stone, rotation:any, category:Stone, display-name:Stone
 name:stone_bricks, rotation:any, category:Stone, display-name:Stone Bricks
 name:stone_slab_side, rotation:side, category:Stone, display-name:Stone Slab Side
@@ -251,9 +248,9 @@ name:stripped_oak_log_top, rotation:any, category:Wood, display-name:Stripped Oa
 name:stripped_spruce_log, rotation:any, category:Wood, display-name:Stripped Spruce Log
 name:stripped_spruce_log_top, rotation:any, category:Wood, display-name:Stripped Spruce Log Top
 name:terracotta, rotation:any, category:Terracotta, display-name:Terracotta
-name:tnt_bottom, rotation:bottom, category:Misc, display-name:Tnt Bottom
-name:tnt_side, rotation:side, category:Misc, display-name:Tnt Side
-name:tnt_top, rotation:top, category:Misc, display-name:Tnt Top
+name:tnt_bottom, rotation:bottom, category:Powered, display-name:Tnt Bottom
+name:tnt_side, rotation:side, category:Powered, display-name:Tnt Side
+name:tnt_top, rotation:top, category:Powered, display-name:Tnt Top
 name:tube_coral_block, rotation:any, category:Corals, display-name:Tube Coral Block
 name:wet_sponge, rotation:any, category:Misc, display-name:Wet Sponge
 name:white_concrete, rotation:any, category:Concrete, display-name:White Concrete

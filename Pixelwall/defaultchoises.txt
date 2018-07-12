@@ -2,18 +2,15 @@ acacia_log
 acacia_planks
 andesite
 birch_planks
-birch_trapdoor
 black_concrete
 black_concrete_powder
 black_terracotta
 black_wool
 blue_concrete
 blue_concrete_powder
-blue_ice
 blue_terracotta
 blue_wool
 bone_block_side
-bone_block_top
 brown_concrete
 brown_concrete_powder
 brown_terracotta
@@ -48,7 +45,6 @@ green_concrete_powder
 green_terracotta
 green_wool
 hay_block_top
-ice
 jungle_log
 jungle_planks
 light_blue_concrete

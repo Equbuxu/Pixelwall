@@ -66,12 +66,18 @@ namespace Pixelwall
             if (success.Value)
             {
                 image = new Uri(fileDialog.FileName);
-                var loadedPreview = new BitmapImage(image);
+
+                var loadedPreview = new BitmapImage();
+                loadedPreview.BeginInit();
+                loadedPreview.UriSource = image;
+                loadedPreview.CacheOption = BitmapCacheOption.OnLoad;
+                loadedPreview.EndInit();
+
                 WidthTextBox.Text = loadedPreview.PixelWidth.ToString();
                 HeightTextBox.Text = loadedPreview.PixelHeight.ToString();
                 PreviewImage.Source = loadedPreview;
+                
             }
-            
         }
 
         private void OnGenerateClick(object sender, RoutedEventArgs e)

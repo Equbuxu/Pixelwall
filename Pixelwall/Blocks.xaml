@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Pixelwall"
         mc:Ignorable="d"
 		Closed="OnClosed"
-        Title="Blocks" Height="720" Width="1280">
+        Title="Blocks" Height="860" Width="1280">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="30"/>

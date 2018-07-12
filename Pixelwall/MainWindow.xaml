@@ -37,7 +37,9 @@
 				</StackPanel>
 
 				<Border BorderBrush="Gray" BorderThickness="1" Grid.Column="1" Grid.Row="0" Width="350" Height="250" HorizontalAlignment="Center">
-					<Image Grid.Column="1" Grid.Row="0" MaxWidth="350" MaxHeight="250" Name="PreviewImage" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+					<local:ZoomBorder x:Name="imageBorder" ClipToBounds="True" Background="LightGray">
+						<Image Grid.Column="1" Grid.Row="0" Name="PreviewImage" RenderOptions.BitmapScalingMode="NearestNeighbor"></Image>
+					</local:ZoomBorder>
 				</Border>
 				<Button Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Width="250" Height="40" Click="OnGenerateClick">Generate</Button>
 			</Grid>

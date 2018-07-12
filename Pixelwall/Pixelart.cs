@@ -89,6 +89,7 @@ namespace Pixelwall
             {
                 GenerateNormal();
             }
+
             CountUses();
             MergeBlockUses();
         }
