@@ -169,7 +169,12 @@ namespace Pixelwall
                         displayName = data.blocks[i].displayName;
                     }
 
-                    file.WriteLine(displayName + ": " + pair.Value);
+                    if (pair.Value <= 64)
+                        file.WriteLine("{0}: {1}", displayName, pair.Value);
+                    else if (pair.Value%64 == 0)
+                        file.WriteLine("{0}: {1} ({2}x64)", displayName, pair.Value, pair.Value / 64);
+                    else
+                        file.WriteLine("{0}: {1} ({2}x64 + {3})", displayName, pair.Value, pair.Value/64, pair.Value % 64);
                 }
                 file.Close();
                 file.Dispose();
