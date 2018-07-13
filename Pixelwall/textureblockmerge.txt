@@ -31,7 +31,7 @@ Red Sandstone, red_sandstone, red_sandstone_bottom, red_sandstone_top
 Sandstone, sandstone, sandstone_bottom, sandstone_top
 Spruce Log, spruce_log, spruce_log_top
 Double Stone Slab, stone_slab_side, stone_slab_top
-Stripped Acacia, stripped_acacia_log, stripped_acacia_top
+Stripped Acacia, stripped_acacia_log, stripped_acacia_log_top
 Stripped Birch Log, stripped_birch_log, stripped_birch_log_top
 Stripped Jungle Log, stripped_jungle_log, stripped_jungle_log_top
 Stripped Oak Log, stripped_oak_log, stripped_oak_log_top
