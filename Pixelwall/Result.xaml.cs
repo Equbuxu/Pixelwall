@@ -40,7 +40,7 @@ namespace Pixelwall
 
         private void AddMaterials()
         {
-            foreach (KeyValuePair<string, int> pair in art.blockUses)
+            foreach (KeyValuePair<string, int> pair in art.blockUses.OrderByDescending(pair => pair.Value))
             {
                 Bitmap texture;
                 string displayName;
@@ -155,7 +155,7 @@ namespace Pixelwall
             if (!String.IsNullOrEmpty(fileDialog.FileName))
             {
                 StreamWriter file = new StreamWriter(fileDialog.FileName);
-                foreach (KeyValuePair<string, int> pair in art.blockUses)
+                foreach (KeyValuePair<string, int> pair in art.blockUses.OrderByDescending(pair => pair.Value))
                 {
                     string displayName;
                     if (data.textures.ContainsKey(pair.Key))
