@@ -31,8 +31,8 @@
 					<CheckBox Margin="2" Name="DitherCheckBox">Use dithering</CheckBox>
 					<Button Width="120" Height="22" Margin="2" HorizontalAlignment="Center" Click="OnBlocksClick">Blocks</Button>
 					<TextBlock Margin="2" HorizontalAlignment="Center">Orientation</TextBlock>
-					<RadioButton GroupName="Orientation" Name="topRadio" Content="Horizontal (look from above)" IsChecked="True"/>
-					<RadioButton GroupName="Orientation" Name="bottomRadio" Content="Horizontal (look from below)" />
+					<RadioButton GroupName="Orientation" Name="topRadio" Content="Horizontal (on floor)" IsChecked="True"/>
+					<RadioButton GroupName="Orientation" Name="bottomRadio" Content="Horizontal (on ceiling)" />
 					<RadioButton GroupName="Orientation" Name="vertRadio" Content="Vertical" />
 				</StackPanel>
 

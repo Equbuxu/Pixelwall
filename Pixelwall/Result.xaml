@@ -6,31 +6,37 @@
         xmlns:local="clr-namespace:Pixelwall"
         mc:Ignorable="d"
         Title="Result" Height="600" Width="600">
-	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="300"/>
-			<RowDefinition Height="60"/>
-			<RowDefinition />
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition/>
-			<ColumnDefinition/>
-		</Grid.ColumnDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-		<Border BorderBrush="Gray" BorderThickness="1" Grid.Row="0" Grid.ColumnSpan="2" Width="500" Height="280">
-			<local:ZoomBorder x:Name="imageBorder" ClipToBounds="True" Background="LightGray">
-				<Image Name="GenerationResult" Grid.Row="0" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-			</local:ZoomBorder>
-		</Border>
+        <Border BorderBrush="Gray" BorderThickness="1" Grid.Row="0" Grid.ColumnSpan="4" Width="500" Height="280">
+            <local:ZoomBorder x:Name="imageBorder" ClipToBounds="True" Background="LightGray">
+                <Image Name="GenerationResult" Grid.Row="0" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+            </local:ZoomBorder>
+        </Border>
 
-		<Button Click="OnSaveTextClick" Width="200" Height="50" Grid.Row="1" Grid.Column="0">Save resources to a text file</Button>
-		<CheckBox Name="ShowChunkGrid" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">Draw chunk grid on image</CheckBox>
-		<Button Click="OnSaveClick" Width="200" Height="40" Grid.Row="1" Grid.Column="1" Margin="0,10,0,0">Save an image</Button>
+        <Button Click="OnSaveTextClick" Width="140" Height="30" Grid.Row="1" Grid.Column="0">Save resources in a txt file</Button>
+        <Button Click="OnSchematicSave" Width="140" Height="30" Grid.Row="1" Grid.Column="1" IsEnabled="False" ToolTip="Yet to be implemented">Save as schematic file</Button>
 
-		<ScrollViewer Grid.Row="2" Grid.ColumnSpan="2" >
-			<WrapPanel Orientation="Horizontal" Name="MaterialList">
+        <Button Click="OnSaveClick" Width="140" Height="30" Grid.Row="1" Grid.Column="2" Margin="0,-20,0,0">Save as an image</Button>
+        <CheckBox Name="ShowChunkGrid" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Margin="0,40,0,0" Grid.ColumnSpan="2">Draw chunk grid on exported image(s)</CheckBox>
 
-			</WrapPanel>
-		</ScrollViewer>
-	</Grid>
+        <Button Click="OnMultipleSave" Width="140" Height="30" Grid.Row="1" Grid.Column="3" Margin="0,-20,0,0" ToolTip="Each block will be rendered on a separate image">Save as multiple images</Button>
+
+        <ScrollViewer Grid.Row="2" Grid.ColumnSpan="4" >
+            <WrapPanel Orientation="Horizontal" Name="MaterialList">
+
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
 </Window>

@@ -53,8 +53,8 @@ name:bubble_coral_block, rotation:any, category:Corals, display-name:Bubble Cora
 name:carved_pumpkin, rotation:side, category:Misc, display-name:Carved Pumpkin
 name:chiseled_quartz_block, rotation:any, category:Quartz, display-name:Chiseled Quartz Block
 name:chiseled_quartz_block_top, rotation:top, category:Quartz, display-name:Chiseled Quartz Block Top
-name:chiseled_red_sandstone, rotation:any, category:Desert, display-name:Chiseled Red Sandstone
-name:chiseled_sandstone, rotation:any, category:Desert, display-name:Chiseled Sandstone
+name:chiseled_red_sandstone, rotation:side, category:Desert, display-name:Chiseled Red Sandstone
+name:chiseled_sandstone, rotation:side, category:Desert, display-name:Chiseled Sandstone
 name:chiseled_stone_bricks, rotation:any, category:Stone, display-name:Chiseled Stone Bricks
 name:clay, rotation:any, category:Misc, display-name:Clay
 name:coal_block, rotation:any, category:Blocks, display-name:Coal Block
@@ -62,8 +62,8 @@ name:coal_ore, rotation:any, category:Ores, display-name:Coal Ore
 name:coarse_dirt, rotation:any, category:Misc, display-name:Coarse Dirt
 name:cobblestone, rotation:any, category:Stone, display-name:Cobblestone
 name:cracked_stone_bricks, rotation:any, category:Stone, display-name:Cracked Stone Bricks
-name:cut_red_sandstone, rotation:any, category:Desert, display-name:Cut Red Sandstone
-name:cut_sandstone, rotation:any, category:Desert, display-name:Cut Sandstone
+name:cut_red_sandstone, rotation:side, category:Desert, display-name:Cut Red Sandstone
+name:cut_sandstone, rotation:side, category:Desert, display-name:Cut Sandstone
 name:cyan_concrete, rotation:any, category:Concrete, display-name:Cyan Concrete
 name:cyan_concrete_powder, rotation:any, category:Concrete Powder, display-name:Cyan Concrete Powder
 name:cyan_glazed_terracotta, rotation:any, category:Glazed Terracotta, display-name:Cyan Glazed Terracotta

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Drawing;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -12,7 +13,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.IO;
 
 namespace Pixelwall
 {
@@ -130,15 +130,27 @@ namespace Pixelwall
             Bitmap newImage = new Bitmap(image);
             Graphics gr = Graphics.FromImage(newImage);
 
-            for (int i = 0; i < image.Size.Width; i += data.TextureResolution * 16)
+            System.Drawing.Pen redPen = new System.Drawing.Pen(System.Drawing.Color.Red, 3);
+            System.Drawing.Pen orangePen = new System.Drawing.Pen(System.Drawing.Color.Orange, 1);
+
+            for (int i = 0; i < image.Size.Width; i += data.TextureResolution * 8)
             {
-                gr.DrawLine(Pens.Red, new PointF { X = i, Y = 0 }, new PointF { X = i, Y = image.Size.Height });
+                if (i % (data.TextureResolution * 16) == 0)
+                    gr.DrawLine(redPen, new PointF { X = i, Y = 0 }, new PointF { X = i, Y = image.Size.Height });
+                else
+                    gr.DrawLine(orangePen, new PointF { X = i, Y = 0 }, new PointF { X = i, Y = image.Size.Height });
             }
 
-            for (int i = 0; i < image.Size.Height; i += data.TextureResolution * 16)
+            for (int i = 0; i < image.Size.Height; i += data.TextureResolution * 8)
             {
-                gr.DrawLine(Pens.Red, new PointF { X = 0, Y = i }, new PointF { X = image.Size.Width, Y = i});
+                if (i % (data.TextureResolution * 16) == 0)
+                    gr.DrawLine(redPen, new PointF { X = 0, Y = i }, new PointF { X = image.Size.Width, Y = i });
+                else
+                    gr.DrawLine(orangePen, new PointF { X = 0, Y = i }, new PointF { X = image.Size.Width, Y = i });
             }
+
+            redPen.Dispose();
+            orangePen.Dispose();
 
             return newImage;
         }
@@ -171,14 +183,52 @@ namespace Pixelwall
 
                     if (pair.Value <= 64)
                         file.WriteLine("{0}: {1}", displayName, pair.Value);
-                    else if (pair.Value%64 == 0)
+                    else if (pair.Value % 64 == 0)
                         file.WriteLine("{0}: {1} ({2}x64)", displayName, pair.Value, pair.Value / 64);
                     else
-                        file.WriteLine("{0}: {1} ({2}x64 + {3})", displayName, pair.Value, pair.Value/64, pair.Value % 64);
+                        file.WriteLine("{0}: {1} ({2}x64 + {3})", displayName, pair.Value, pair.Value / 64, pair.Value % 64);
                 }
                 file.Close();
                 file.Dispose();
             }
+        }
+
+        private void OnSchematicSave(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OnMultipleSave(object sender, RoutedEventArgs e)
+        {
+            var fileDialog = new Microsoft.Win32.SaveFileDialog
+            {
+                Filter = "PNG image|*.png",
+                Title = "Save an Image"
+            };
+            fileDialog.ShowDialog();
+
+            if (String.IsNullOrEmpty(fileDialog.FileName))
+            {
+                return;
+            }
+
+            Bitmap image = new Bitmap(art.width * 16, art.height * 16);
+            foreach (KeyValuePair<string, Texture> texture in data.textures)
+            {
+                if (!art.PaintSpecificImage(texture.Value, image))
+                    continue;
+                string name = System.IO.Path.GetDirectoryName(fileDialog.FileName) + "\\" + System.IO.Path.GetFileNameWithoutExtension(fileDialog.FileName) + "-" + texture.Value.displayName + ".png";
+                if (ShowChunkGrid.IsChecked.Value)
+                {
+                    var grid = DrawChunkGrid(image);
+                    grid.Save(name);
+                }
+                else
+                {
+                    image.Save(name);
+                }
+            }
+            image.Dispose();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Drawing;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 
@@ -110,7 +110,7 @@ namespace Pixelwall
         {
             for (int i = 0; i < data.blocks.Count; i++)
             {
-               foreach (string id in data.blocks[i].textureIDs)
+                foreach (string id in data.blocks[i].textureIDs)
                 {
                     if (!blockUses.ContainsKey(id))
                         continue;
@@ -201,11 +201,33 @@ namespace Pixelwall
             return result;
         }
 
+        public bool PaintSpecificImage(Texture texture, Bitmap surface)
+        {
+            if (surface.Width != width * 16 || surface.Height != height * 16)
+                throw new Exception("incorrect bitmap size");
+            Graphics gr = Graphics.FromImage(surface);
+            gr.Clear(Color.White);
+            bool drawn = false;
+            for (int j = 0; j < height; j++)
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    if (field[i + j * width] == texture)
+                    {
+                        gr.DrawImage(field[i + j * width].texture, new Point(i * 16, j * 16));
+                        drawn = true;
+                    }
+                }
+            }
+            gr.Dispose();
+            return drawn;
+        }
+
         private Texture GetClosestTexture(Color color)
         {
             double minDist = Double.PositiveInfinity;
             Texture closestTexture = null;
-            foreach (KeyValuePair<string,Texture> pair in data.textures)
+            foreach (KeyValuePair<string, Texture> pair in data.textures)
             {
                 if (!pair.Value.used)
                     continue;
