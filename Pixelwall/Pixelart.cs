@@ -201,6 +201,86 @@ namespace Pixelwall
             return result;
         }
 
+        public Litematic CreateLitematic()
+        {
+            Litematic litematic = new Litematic();
+
+            litematic.author = "Pixelwall";
+            litematic.description = "";
+            litematic.name = "Pixelart";
+            litematic.regioncount = 1;
+
+            if (orientation == BlockOrientation.VERTICAL)
+            {
+                litematic.SetSize(width, height, 1);
+                for (int j = 0; j < height; j++)
+                {
+                    for (int i = 0; i < width; i++)
+                    {
+                        litematic.SetBlock(i, j, 0, field[i + j * width].id);
+                    }
+                }
+            }
+            else
+            {
+                litematic.SetSize(width, 1, height);
+                for (int j = 0; j < height; j++)
+                {
+                    for (int i = 0; i < width; i++)
+                    {
+                        litematic.SetBlock(i, 0, j, field[i + j * width].id);
+                    }
+                }
+            }
+
+            return litematic;
+        }
+
+        public Litematic CreateSpecificLitematic(Texture texture)
+        {
+            Litematic litematic = new Litematic();
+
+            litematic.author = "Pixelwall";
+            litematic.description = "";
+            litematic.name = "Pixelart";
+            litematic.regioncount = 1;
+
+            bool drawn = false;
+            if (orientation == BlockOrientation.VERTICAL)
+            {
+                litematic.SetSize(width, height, 1);
+                for (int j = 0; j < height; j++)
+                {
+                    for (int i = 0; i < width; i++)
+                    {
+                        if (field[i + j * width] == texture)
+                        {
+                            litematic.SetBlock(i, j, 0, field[i + j * width].id);
+                            drawn = true;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                litematic.SetSize(width, 1, height);
+                for (int j = 0; j < height; j++)
+                {
+                    for (int i = 0; i < width; i++)
+                    {
+                        if (field[i + j * width] == texture)
+                        {
+                            litematic.SetBlock(i, 0, j, field[i + j * width].id);
+                            drawn = true;
+                        }
+                    }
+                }
+            }
+            if (drawn == false)
+                return null;
+            return litematic;
+        }
+
         public bool PaintSpecificImage(Texture texture, Bitmap surface)
         {
             if (surface.Width != width * 16 || surface.Height != height * 16)

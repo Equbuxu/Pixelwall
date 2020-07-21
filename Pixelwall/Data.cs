@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
-using System;
+using System.IO;
 
 namespace Pixelwall
 {
@@ -74,7 +74,8 @@ namespace Pixelwall
                     }
                 }
             }
-            catch (IOException) {
+            catch (IOException)
+            {
                 window.ConsoleLogWarning("No file found.");
             }
         }
@@ -164,7 +165,7 @@ namespace Pixelwall
                             textureIDs = new string[parameters.Length - 1],
                             displayName = parameters[0],
                         };
-                        for (int i = 1; i<parameters.Length;i++)
+                        for (int i = 1; i < parameters.Length; i++)
                         {
                             block.textureIDs[i - 1] = parameters[i];
                         }

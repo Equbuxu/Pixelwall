@@ -193,9 +193,41 @@ namespace Pixelwall
             }
         }
 
-        private void OnSchematicSave(object sender, RoutedEventArgs e)
+        private void OnLitematicSave(object sender, RoutedEventArgs e)
         {
+            var fileDialog = new Microsoft.Win32.SaveFileDialog
+            {
+                Filter = "litematic|*.litematic",
+                Title = "Save a litematic"
+            };
+            fileDialog.ShowDialog();
 
+            if (!String.IsNullOrEmpty(fileDialog.FileName))
+            {
+                art.CreateLitematic().Save(fileDialog.FileName);
+            }
+        }
+
+        private void OnMultLitematicSave(object sender, RoutedEventArgs e)
+        {
+            var fileDialog = new Microsoft.Win32.SaveFileDialog
+            {
+                Filter = "litematic|*.litematic",
+                Title = "Save a litematic"
+            };
+            fileDialog.ShowDialog();
+
+            if (!String.IsNullOrEmpty(fileDialog.FileName))
+            {
+                foreach (KeyValuePair<string, Texture> texture in data.textures)
+                {
+                    Litematic lm = art.CreateSpecificLitematic(texture.Value);
+                    if (lm == null)
+                        continue;
+                    string name = System.IO.Path.GetDirectoryName(fileDialog.FileName) + "\\" + System.IO.Path.GetFileNameWithoutExtension(fileDialog.FileName) + "-" + texture.Value.displayName + ".litematic";
+                    lm.Save(name);
+                }
+            }
         }
 
         private void OnMultipleSave(object sender, RoutedEventArgs e)

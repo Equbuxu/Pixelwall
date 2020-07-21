@@ -26,7 +26,8 @@
         </Border>
 
         <Button Click="OnSaveTextClick" Width="140" Height="30" Grid.Row="1" Grid.Column="0">Save resources in a txt file</Button>
-        <Button Click="OnSchematicSave" Width="140" Height="30" Grid.Row="1" Grid.Column="1" IsEnabled="False" ToolTip="Yet to be implemented">Save as schematic file</Button>
+        <Button Click="OnLitematicSave" Width="140" Height="20" Grid.Row="1" Grid.Column="1" Margin="0,-23,0,0">Save as a litematic</Button>
+        <Button Click="OnMultLitematicSave" Width="140" Height="20" Grid.Row="1" Grid.Column="1" Margin="0,23,0,0">Save as mult. litematics</Button>
 
         <Button Click="OnSaveClick" Width="140" Height="30" Grid.Row="1" Grid.Column="2" Margin="0,-20,0,0">Save as an image</Button>
         <CheckBox Name="ShowChunkGrid" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Margin="0,40,0,0" Grid.ColumnSpan="2">Draw chunk grid on exported image(s)</CheckBox>

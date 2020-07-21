@@ -18,7 +18,7 @@ namespace Pixelwall
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    
+
     public partial class MainWindow : Window
     {
         public Data data;
@@ -57,7 +57,7 @@ namespace Pixelwall
 
         private void OnChooseImageClick(object sender, RoutedEventArgs e)
         {
-            
+
             var fileDialog = new Microsoft.Win32.OpenFileDialog();
             fileDialog.DefaultExt = ".png";
             fileDialog.Filter = "Images (*.png,*.jpg, *.jpeg)|*.png;*.jpg;*.jpeg";
@@ -76,13 +76,13 @@ namespace Pixelwall
                 WidthTextBox.Text = loadedPreview.PixelWidth.ToString();
                 HeightTextBox.Text = loadedPreview.PixelHeight.ToString();
                 PreviewImage.Source = loadedPreview;
-                
+
             }
         }
 
         private void OnGenerateClick(object sender, RoutedEventArgs e)
         {
-            
+
             Pixelart pixelart;
 
             BlockOrientation orientation = BlockOrientation.TOP;
@@ -106,7 +106,7 @@ namespace Pixelwall
 
             Result resultWindow = new Result(pixelart, data, this);
             resultWindow.Show();
-            
+
         }
     }
 }
